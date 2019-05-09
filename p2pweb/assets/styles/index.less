@@ -1,0 +1,394 @@
+@charset 'utf-8';
+
+*{
+    box-sizing: border-box;
+    ul{
+        list-style: none;
+    }
+}
+// 公共颜色
+@baseColor:#F7775F;
+
+header{
+    height: 30px;
+    line-height: 30px;
+    .el-topbar{
+        .navbar-nav{
+            li{
+                a{
+                    padding-top: 8px;
+                    line-height: 15px; 
+                }
+            }
+        }
+        border-radius: 0;
+        margin-bottom: 0;
+        .navbar-brand{
+            font-size: 14px;
+            padding: 6px 15px;
+            span{
+                font-size: 14px;
+            }
+        }
+      .navbar-right{
+          a:hover{
+              color: @baseColor;
+          }
+      }  
+    }
+}
+
+.navbar{
+    margin-bottom: 0px!important;
+    height: 70px;
+    line-height: 70px;
+    .navbar-brand{
+        img{
+         position: relative;
+         top:-8px;
+         left: -70px;
+        }
+
+    }
+    .navbar-nav{
+        li{
+          
+            .el-item{
+                font-size: 18px;
+                line-height: 40px;
+                &:hover{
+                    color: @baseColor;
+                }
+            }
+           
+} 
+.active1{
+    border-bottom:@baseColor 2px solid;
+    color: @baseColor;
+}
+ }
+}
+main{
+    margin-top: 20px;
+    .el-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        li{
+           margin-top: 30px; 
+        }
+    }
+    .el-panel{
+        box-shadow: none;
+        .panel-title{
+            font-size: 24px;
+            color: @baseColor;
+            font-weight: bold;
+            overflow: hidden;
+            border-bottom: 1px solid #e8e8e8;
+            margin: 10px 0px 16px;
+            span {
+                border-bottom: 3px solid; 
+            }
+        }
+        thead th {
+            font-size: 16px;
+            vertical-align: middle; 
+        }
+
+    } 
+    .el-new-list{
+        ul{
+            padding: 0px;
+            li{
+                overflow: hidden;
+                line-height: 38px;
+                font-size: 14px;
+                border-bottom: 1px dotted #eee; 
+                a{
+                    color: #555;
+                    overflow: hidden;
+                    &:hover{
+                        background: none repeat scroll 0 0 #f5f5f5;
+                        color: @baseColor;  
+                    }
+                }
+            }
+        }
+    }
+    // 新闻
+    .el-news{
+        padding-left: 0px;
+        .el-news-lists{
+            padding: 0px;
+            margin-left:12px;
+        }
+        ul{
+            padding: 0px;
+            li{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                line-height: 30px;
+                font-size: 14px;
+                border-bottom: none; 
+                 
+                a{
+                    color: #555;
+                    overflow: hidden;
+                    &:hover{
+                        color: @baseColor;  
+                    }
+                }
+            }
+        }
+        .el-img{
+           width: 220px;
+           margin-left:12px;
+           
+        }
+    }
+    // 菜单
+    #menu{
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: 0px 0px;
+            margin-bottom: -1px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+               .title{
+                        padding: 0px;
+                        outline: none;
+                        display: block;
+                        padding: 10px 15px;
+                        background: #F5F5F5;
+                        text-decoration: none;
+                        border-bottom: 1px solid #ddd;
+                    }
+                    ul{
+                      padding:0px;
+                    }
+        }
+        li{
+         padding: 10px 15px;
+           a{
+             color: #555;
+             padding: 0px 15px;
+              &:hover{
+              text-decoration: none;
+    
+           }
+    
+      }
+        }
+        .active{
+            background-color: #F7775F;
+        }
+    }
+     // 表单
+    #form{
+        .form-control{
+        width: 280px;
+      }
+    }
+   //  充值中心
+   .el-recharge-table{
+    tbody {
+        tr{
+            td {
+                vertical-align: middle;
+            }
+        }
+    }
+   }
+   .el-bank {
+    display: block;
+    width: 150px;
+    height: 30px;
+    }
+    .el-bank01{
+       background: url('/dist/image/bank_list_03.jpg') no-repeat;
+    }
+    .el-bank02 {
+        background: url('/dist/image/bank_list_06.jpg') no-repeat;
+    }
+
+    .el-bank03 {
+       background: url('/dist/image/bank_list_08.jpg') no-repeat;
+    }
+    .el-recharge-form input {
+        width: 280px;
+    }
+
+    .tab-content {
+        border: 1px solid #ddd;
+        border-top: none;
+        padding: 0px 20px;
+    }
+    //  个人中心
+    .el-account{
+        .el-account-info{
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 16px;
+            .el-head-img {
+                border: 1px solid #ddd;
+                padding: 10px;
+                float: left;
+                .icon{
+                    height: 72px;
+                    width: 72px;
+            }
+            }
+            .el-head {
+                margin-top: 5px;
+                margin-left: 15px;
+            }
+           
+        } 
+      .btn {
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.3333333;
+            border-radius: 6px;
+        }
+
+        .el-accoun-auth{
+            margin-top: 30px;
+            img {
+                vertical-align: middle;
+            }
+            .el-accoun-auth-left {
+                float: left;
+            }
+            .el-accoun-auth-right {
+                float: left;
+                margin-left: 10px;
+            }
+        }
+        
+    } 
+    // 标题设置
+    .el-tip-info{
+        padding:20px;
+        background-color: #F4F8FA;
+        border-left: 2px solid @baseColor;
+        margin-bottom: 20px;
+    }
+    .el-tip-info h3{
+        color:@baseColor;
+    }
+   
+
+     .el-bc {
+         background: rgb(238, 238, 238);
+        .panel-heading{
+            .panel-title{
+                font-size: 24px;
+            }
+            background-color: #ec7e20;
+            font-weight: 300;
+            line-height: 48px;
+            padding-left: 20px;
+            color: #FFFFFF;
+        }
+         .btn{
+            border-radius: 20px;
+            background: #00a8ff;
+            color: #fff;
+            display: block;
+            margin: 0px auto;
+            width: 80px;
+            height: 30px;
+            line-height: 15px;
+         }
+         p{
+             margin-top: 14px;
+             font-size: 16px;
+         }
+  
+       }
+
+   	#realAuthForm {
+        input{   width: 260px;
+        }
+     
+            .idCardItem{
+                width: 160px;
+                height: 150px;
+                float:left;
+                margin-right:10px;
+                border: 1px solid #e3e3e3;
+                text-align: center;
+                padding: 5px;
+        }
+        .uploadImg{
+            width: 120px;
+            height: 100px;
+            margin-top: 5px;
+        }
+        .swfupload{
+            left: 0px;
+        }
+        .uploadify{
+            height: 20px;
+            font-size:13px;
+            line-height:20px;
+            text-align:center;
+            position: relative;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            color: #fff;
+        }
+        
+        #viewExample{
+            position: relative;
+            left: 50px;
+            top: 60px;
+        }
+        .uploadExample{
+            width: 200px;
+            height: 130px;
+        }             
+       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    }
+    #realAuthForm select{
+        width: 260px; 
+    }
+  
+    
+}
+
+
+footer{
+     margin-top: 20px;
+     height:100%;
+     background-color: #363B3F;
+     .row {
+        margin-right: 0px;
+        margin-left: 0px!important;
+    }
+     .border{
+         border-right: 1px solid #667A90;
+         margin-top: 40px;
+         &:last-child{
+             border-left: 0;
+         }
+     }
+     ul{
+         list-style: none;
+         li{
+             margin: 14px;
+             a{
+                 color: #667A90; 
+                 text-decoration: none;
+                 padding-left: 60px;
+                 &:hover{
+                     color:@baseColor;
+                 }
+             }
+         }
+     }
+   
+}

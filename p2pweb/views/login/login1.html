@@ -1,0 +1,38 @@
+
+  <link rel="stylesheet" href="/dist/css/login1.min.css">
+  <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css.map">
+    <main>
+
+      <div class="login-container">
+        <div class="login-box">
+          <fieldset>
+            <legend>用户登录</legend>
+            <form action="http://127.0.0.1:81/login.php" method="POST">
+              <div class="form-group">
+                <label for="username">用户名:</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="用户名">
+              </div>
+              <div class="form-group">
+                <label for="password">密码:</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="密码">
+              </div>
+              <!-- 验证 -->
+              <div class="verify-wrap" id="verify-wrap"></div>
+              <p class="error">登录失败,请检查账号或者用户号名！</p>
+              <button type="submit" class="btn btn-default">登录</button>
+              <button type="reset" class="btn btn-default">重置</button>
+            </form>
+          </fieldset>
+        </div>
+      </div>
+    </main>
+   
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+      <!-- 引入第三方验证插件 -->
+      <link rel="stylesheet" href="/lib/bootstrapvalidator/dist/css/bootstrapValidator.min.css">
+      <script src="/lib/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+      <script src="/lib/bootstrapvalidator/dist/js/language/zh_CN.js"></script>
+      <script src="/dist/js/login1.min.js"></script>
+      <script src="/lib/slideVerify/js/jq-slideVerify.js"></script>
+    

@@ -1,0 +1,74 @@
+   <link rel="stylesheet" href="/dist/css/index.min.css">
+<div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      修改资料
+    </div>
+      <form class="form-horizontal" id="realAuthForm" method="get" action="http://127.0.0.1:81/updateuser.php" novalidate="novalidate">
+      <fieldset>
+        <div class="form-group">
+          <p class="text-center text-danger">修改个人信息，请认真填写！</p>
+        </div>
+        <div class="form-group">
+              <label class="col-sm-4 control-label ">用户名</label>
+              <div class="col-sm-8">
+                <p id="user_real" class="form-control-static">111</p>
+              </div>
+            </div>
+        <div class="form-group">
+              <label class="col-sm-4 control-label" for="realName">昵称</label>
+              <div class="col-sm-8">
+                <input id="realName" name="nickname" class="form-control" type="text" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4  control-label" for="sex">性别</label>
+              <div class="col-sm-8">
+                <select id="sex" class="form-control" name="sex" size="1">
+              <option value="0">男</option>
+              <option value="1">女</option>
+            </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="realname" class="col-sm-4 control-label">邮箱</label>
+              <div class="col-sm-4">
+              <input type="text" class="form-control" id="realname" name="email">
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="realname" class="col-sm-4 control-label">手机</label>
+              <div class="col-sm-4">
+              <input type="text" class="form-control" id="realname" name="phone">
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="cardtype" class="col-sm-4 control-label">学历</label>
+              <div class="col-sm-5">
+              <select name="education" id="cardtype" class="form-control">
+                  <option value="本科">本科</option>
+                  <option value="博士">博士</option>
+                  <option value="硕士">硕士</option>
+                  <option value="专科">专科</option>
+                  <option value="高中">高中</option>
+                  <option value="其他">其他</option>
+              </select>
+              </div>
+          </div>
+          
+            <div class="form-group">
+              <button type="submit" id="asubmit" class="btn btn-warning col-sm-offset-4" data-loading-text="正在提交"><i class="icon-ok"></i> 提交认证</button>
+            </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+<script>
+    var val = $('#index_user').html();
+            console.log(val);
+            
+            //当前用户名字段
+  $('#user_real').html( val != '未登录' ? val : '未登录')
+</script>
+					
+			

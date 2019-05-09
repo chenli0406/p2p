@@ -1,0 +1,152 @@
+<main>
+    <div class="container">
+        <div class="el-tip-info">
+            <h3><span id="borrw_title">信用</span>借款</h3>
+            <p>
+                <span class="text-info">授信额度：</span><span  style="color: #F7775F;" >2000 </span> &emsp;&emsp;&emsp;
+                <span class="text-info">可借金额：</span><span  style="color: #F7775F;" >2000</span>
+            </p>
+        </div>
+    
+        <div class="page-header lead">
+            借款信息
+            <label class="label label-warning">信用标</label>
+        </div>
+        <form class="form-horizontal el-borrow-form" novalidate="novalidate" method="get" action="http://127.0.0.1:81/borrow.php">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">
+                    借款金额
+                </label>
+                <div class="col-sm-3  input-group">
+                    <input class="form-control" name="borrowmoney" id="borrw_borrowmoney" />
+                    <span class="input-group-addon">元</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">
+                    借款利息
+                </label>
+                <div class="col-sm-3  input-group">
+                    <input class="form-control" name="interest" id="borrw_interest"/>
+                    <span class="input-group-addon">%</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">
+                    借款期限
+                </label>
+                <div class="col-sm-3 input-group">
+                    <select class="form-control" name="borrowtime" id="borrw_borrowtime">
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option value="6">6</option>
+                        <option value="9">9</option>
+                        <option value="12">12</option>
+                        <option value="24">24</option>
+                    </select>
+                    <span class="input-group-addon">月</span>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label class="col-sm-3 control-label">
+                    还款方式
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" value="0" checked="checked" name="repaytype" />
+                    按月分期
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" value="1" name="repaytype" />
+                    按月到期
+                </label>
+            </div>
+    
+            <div class="form-group">
+                <label class="col-sm-3 control-label">
+                    最小投标
+                </label>
+                <div class="col-sm-3  input-group">
+                    <input class="form-control" name="minbid" />
+                    <span class="input-group-addon">元</span>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label class="col-sm-3 control-label">
+                    招标天数
+                </label>
+                <div class="col-sm-3 input-group">
+                    <select class="form-control" name="days">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <span class="input-group-addon">天</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">
+                    借款标题
+                </label>
+                <div class="col-sm-6 input-group">
+                    <input name="title" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">
+                    借款描述
+                </label>
+                <div class="col-sm-6  input-group">
+                    <textarea name="info" rows="4" class="form-control" style="resize: none;"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-warning col-lg-offset-3" type="submit" data-loading-text="提交">
+                    提交申请
+                </button>
+                
+            </div>
+    
+            <div class="el-borrow-form-tip">
+                <h4>相关费用</h4>
+                <p>
+                    <span class="text-info">利息</span>
+                    <span class="el-borrow-cost" id="borrw_cost01">--</span>
+                </p>
+                <p>
+                    <span class="text-info">管理费</span>
+                    <span class="el-borrow-cost" id="borrw_cost02">--</span>
+                </p>
+            </div>
+        </form>
+    </div>
+</main>
+
+<style>
+    
+    .el-borrow-form{
+        position: relative;
+    }
+    .el-borrow-form-tip{
+        width: 300px;
+        border-radius: 3px;
+        border:1px solid #ddd;
+        box-shadow: 1px 1px 20px #ddd;
+        padding:20px 30px;
+        position: absolute;
+        top:10px;
+        right: 100px;
+    }
+   
+</style>
+<script src="/src/borrow.js"></script>

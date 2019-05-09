@@ -1,0 +1,63 @@
+<main>   <!--网页导航  -->
+                <div class="container" style="margin-top: 20px;">
+                  <div class="row">
+                    <!-- 菜单 -->
+                    <div class="col-sm-3">
+                      <ul id="menu" class="list-group">
+                        <li class="list-group-item ">
+                          <a class="title"> <span>投资项目</span></a>
+                        </li>
+                        <li class="list-group-item">
+                          <a  class="title"><span>借款项目</span></a>
+                          <ul class="ul_active">
+                            <li><a href="#/myself/bid_list"><span>借款项目</span></a></li>
+                            <li><a><span>信用借款</span></a></li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          <a  class="title"><span class="text-title">我的账户</span></a>
+                          <ul class="ul_active">
+                            <li><a href="#/myself/personal">账户信息</a></li>
+                            <li><a href="#/myself/realAuth">资料修改</a></li>
+                            <li><a>银行卡管理</a></li>
+                            <li><a>登录记录</a></li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          <a  class="title"><span>资产详情</span></a>
+                          <ul class="ul_active">
+                            <li><a href="#/myself/accountflow">账户流水</a></li>
+                            <li><a href="#/myself/recharge_list">充值明细</a></li>
+                            <li><a href="#/myself/moneyWithdraw" >提现记录</a></li>
+                            <li><a>收款明细</a></li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          <a href="#/myself/userInfo" class="title"> <span>个人资料</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- 内容 -->
+                    <div class="col-sm-9">
+                        <div id="personal">
+                          
+                        </div>
+                    </div> 
+                  </div>
+            
+                </div>
+</main>
+<style>
+  .active2{
+    background: #F7775F;
+  }
+  
+</style>
+<script>
+  $(function(){
+    $("#menu .ul_active li ").on("click",function(){
+      //$(this).addClass("active2").siblings().removeClass();
+    
+    })
+  })
+</script>

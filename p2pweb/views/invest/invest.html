@@ -1,0 +1,40 @@
+<main>
+    <div class="container">
+          <h4 class="page-title">投资列表</h4>
+          <form action="#" id="searchForm">
+              <div style="margin: 20px 0px;">
+                      <span class="text-muted">标的状态</span><div style="margin-left: 30px" class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                      <input type="radio" name="bidRequestState" checked />&emsp;全部&emsp;
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="radio" name="bidRequestState"/>&emsp;招标中&emsp;
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="radio" name="bidRequestState"/>&emsp;还款中&emsp;
+                    </label>
+                  </div>
+              </div>
+          </form>
+          <table class="table el-table table-hover">
+              <thead id="gridHead">
+                  <tr>
+                      <th>借款人</th>
+                      <th width="180px">借款标题</th>
+                      <th>年利率</th>
+                      <th>金额</th>
+                      <th>还款方式</th>
+                      <th>进度</th>
+                      <th width="60px">操作</th>
+                  </tr>
+              </thead>
+              <tbody id="invest_gridBody">
+             
+              </tbody>
+          </table>
+          <div style="text-align: center;">
+              <ul id="pagination" class="pagination"></ul>
+          </div>
+      </div>
+  </main>
+  <script src="/src/invest.js"></script>
